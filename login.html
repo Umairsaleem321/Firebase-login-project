@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut-icon"  type="x-icon"   href="logo_1.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Create a login page with the help of Firebase</title>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+    <!-- <div class="form" style="justify-content: center;text-align: center; border: 50px solid rgb(98, 163, 165); ">
+        <h1 style="font-size: 3rem;text-transform: uppercase;">Sign Up</h1>
+        <form onsubmit="Signup(event)">
+            <input type="text" class="email" id="email" placeholder="Enter your email Address" style="width: 30%; color: rgb(0, 0, 0);"><br><br>
+            <input type="password" id="password" placeholder="Enter your password" style="width: 30%;"><br><br>
+            <button type="submit" style="width: 15%;">SUBMIT</button><br><br>
+        </form>
+    </div>
+
+<br><br><br> -->
+
+
+
+    <div class="form1" style="justify-content: center;text-align: center; border: 50px solid rgb(98, 163, 165); font-style: italic; font-size: 80%;">
+        <h1 style="font-size: 3rem; text-transform: uppercase;">Login</h1>
+        <form onsubmit="Login(event)">
+            <input type="text" class="email" id="Login-email" placeholder="Enter your email Address" style="width: 30%;"><br><br>
+            <input type="password" id="Login-password" placeholder="Enter your password" style="width: 30%;"><br><br>
+            <button type="submit">Login</button><br><br>
+          
+            <button onclick="Logout()">Logout</button>
+            <div style="font-size: 16px; margin-bottom: 20px;">
+                Again login after logout..
+              
+               </div>
+        
+
+            </form>
+    </div>
+
+    <hr>
+<div class="center" style="text-align: center; background: rgb(77, 196, 196); margin-top: 20px; padding-top: 20px; padding-bottom: 20px;">
+    <h2 style="font-size: 2rem; text-transform: uppercase;color: blue;">your account details</h2>
+     <img src="download.jpeg" style="border-radius: 50%;"
+     height="auto" id="propic" width="10%"  alt=""> 
+     <input type="file" accept="image/*" onchange="uploadimg(event)">
+    <div id="userdetails"></div>
+</div>
+<br><br>
+<hr>
+
+<div id="model">
+    <h1 style="font-size: 2rem; text-transform: uppercase; padding-top: 20px;">user deatils</h1>
+    <form  action="" id="editsprofile" onsubmit="userupdate(event)"> 
+        <input type="text" name="name"placeholder="Name" style="background-color: white;width: 25%; color: blue; border: none; border-radius: 20% solid transparent;"><br><br>
+        <input type="email" name="email"placeholder="Email Address" style="background-color: white;width: 25%;  color: blue; border: none;"><br><br>
+        <input type="number" name="phone"placeholder="Cell No" style="background-color: white;width: 25%;  color: blue; border: none;"><br><br>
+        <input type="text" name="speciality"placeholder="Strength" style="background-color: white;width: 25%;  color: blue; border: none;"><br><br>
+        <input type="text" name="portfolioUrl"placeholder="Portfolio Url" style="background-color: white;width: 25%;  color: blue; border: none;"><br><br>
+        <input type="text" name="gender"placeholder="Gender" style="background-color: white; color: blue;width: 25%;  border: none; "><br><br>
+        <button>SUBMIT</button>
+         <div style="padding-top: 10px; padding-bottom: 20px; font-size: 15px; text-decoration: none;">Go to back <a href="./index.html"> home page</a></div>
+    </form>
+</div>
+ <script src="test.js"></script>
+    <script src="firebase_db.js"></script>
+
+
+    <script src= "https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
+
+
+    <script>
+          const firebaseConfig = {
+            apiKey: "AIzaSyD2NgHkrOn4bh8bEB8OwgJ7ooqI4_05s5Q",
+    authDomain: "login-projectnew.firebaseapp.com",
+    projectId: "login-projectnew",
+    storageBucket: "login-projectnew.appspot.com",
+    messagingSenderId: "132792594559",
+    appId: "1:132792594559:web:4569ca22402f63cd694f4a"
+  
+  };
+
+  firebase.initializeApp(firebaseConfig);
+    </script>
+
+    
+</body>
+</html>
